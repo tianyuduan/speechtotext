@@ -70,10 +70,12 @@
       
       console.log(p.textContent);
       if (transcript.includes('hello')){
-         const greetingsScript = 'hello stranger what is your name';
-         // console.log(greetingsScript);
-         ai.textContent = greetingsScript;
-         toggleSpeak(greetingsScript);
+        setTimeout(function () {
+          
+          const greetingsScript = 'hello stranger what is your name';
+          ai.textContent = greetingsScript;
+          toggleSpeak(greetingsScript);
+        }, 500)// console.log(greetingsScript);
       }
       
       
@@ -89,7 +91,7 @@
         toggleSpeak(weatherScript);
       }
       
-      if (transcript.includes('how are you')){
+      if (transcript.includes('how are you') || (transcript.includes('what about yourself'))){
          const greeting2 =  ('I am good myself, how about you?');
          ai.textContent = greeting2; //text display
          toggleSpeak(greeting2);
@@ -100,11 +102,34 @@
          setTimeout(function () {
            let nameScript = transcript.replace('my name is', '');
            toggleSpeak('hello' + nameScript + "how are you");
-         }, 2000)
-
+         }, 1750)
+       }
+       
+       if (transcript.includes("I'm")  || transcript.includes("I am") || transcript.includes("I been")){
+         const greeting3 =  ('that is good to hear');
+         setTimeout(function () {
+           ai.textContent = greeting3; //text display
+           toggleSpeak(greeting3);
+         }, 1000)
        }
 
-      
+       if (transcript.includes('initiate secret convo')){
+
+         setTimeout(function () {
+
+           
+         }, 1000)
+       }
+       
+       if (transcript.includes('donde esta la biblioteca') ||  transcript.includes("Donde Bibloteca")){
+
+         setTimeout(function () {
+           const rap = ('Me llamo T-Bone, La araña, disco teca. Disco teca, muñeca, La biblio teca, Está en bigotes grandes, el perro, manteca. Manteca, bigotes, gigante, pequeño, la cabeza es nieve, cerveza es bueno. Buenos, dias, me gusta papas frías, los bigotes de la cabra Es, Cameron Diaz. Yea Boi. Boi. Yea. What. Its 2009. Word')
+           ai.textContent = rap;
+           toggleSpeak(rap);
+         }, 1000)
+       } 
+
       
   });
   
