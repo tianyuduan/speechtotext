@@ -1,0 +1,130 @@
+* {
+	transition: all 0.125s ease-in-out;
+}
+
+body {
+	margin: 0;
+	font-family: "Roboto";
+	background-color: #ECECEC;
+	cursor: default;
+	user-select: none;
+}
+
+#top {
+	position: absolute;
+	width: calc(100% - 50px);
+	height: 100px;
+	background-color: #4285F4;
+	padding: 25px;
+	cursor: pointer;
+}
+
+#card {
+	top: 85px;
+	margin-bottom: 85px;
+	padding-top: 25px;
+}
+
+#card,
+input {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 75%;
+	background-color: #FAFAFA;
+	color: #737373;
+	padding-left: 25px;
+	padding-right: 25px;
+	border-radius: 2px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+input {
+	border: none;
+	top: 150px;
+	height: 40px;
+	line-height: 40px;
+	padding-top: 12.5px;
+	padding-bottom: 12.5px;
+	font-family: "Roboto";
+}
+
+input:focus {
+	outline-style: none;	
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #E1E1E1;
+    margin-left: -25px;
+    margin-right: -25px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+p {
+	line-height: 1.75;
+}
+
+
+#card a {
+	color: #737373;
+}
+
+#top a {
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.words {
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5em;
+}
+
+.textRecognition {
+  border: 2px solid gray;
+  width: 400px;
+  height: 400px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.textAI {
+  border: 2px solid gray;
+  width: 400px;
+  height: 400px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.textAI:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.textRecognition:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: -50px;
+}
+
+
+.robotFemale {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  z-index: 50;
+  /* border: 2px solid green; */
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+  float: right !important;
+  clip: rect(0px,350px,700px,0px);
+}

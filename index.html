@@ -5,13 +5,23 @@
   <title>Speech Detection</title>
 </head>
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="main.css">
 <div> Speech Detection Program <div>
 <div> Simply begin talking to create words on the screen<div>
 <body>
-
-  <div class="words" contenteditable>
+  
+  <img class='robotFemale' src="./robotFemale.png" alt="">
+  
+  
+<div id="card">
+  <div class="header">
+    <b>Human Recording</b>
+    <b>Robot Response </b>
   </div>
+	<hr>
+    <div class="words" contenteditable>
+    </div>
+</div>
+
 
 <script>
   const msg = new SpeechSynthesisUtterance();
@@ -27,8 +37,8 @@
   var p = document.createElement('p');
   var ai = document.createElement('p')
   
-  p.setAttribute("class", "text");
-  ai.setAttribute('class', 'text');
+  p.setAttribute("class", "textRecognition");
+  ai.setAttribute('class', 'textAI');
   
   const words = document.querySelector('.words');
   words.appendChild(p);
@@ -138,6 +148,7 @@
 
   recognition.start();
   // toggle(false);
+
 
 </script>
 </body>
