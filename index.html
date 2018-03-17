@@ -125,6 +125,7 @@
          console.log(transcript);
          setTimeout(function () {
            let nameScript = transcript.replace('my name is', '');
+           ai.textContent = ('hello' + nameScript + " how are you")
            toggleSpeak('hello' + nameScript + "how are you");
          }, 1750)
        }
