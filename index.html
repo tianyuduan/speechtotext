@@ -5,8 +5,8 @@
   <title>Speech Detection</title>
 </head>
 <link rel="stylesheet" href="style.css">
-<div> Speech Detection Program <div>
-<div> Simply begin talking to create words on the screen<div>
+<div class='font'> Speech Detection <div>
+<div class='font'> Simply begin talking to create words on the screen<div>
 <body>
   
   <img class='robotFemale' src="./robotFemale.png" alt="">
@@ -21,6 +21,20 @@
     <div class="words" contenteditable>
     </div>
 </div>
+
+<ul>
+    <li>
+      <a href="#">
+        <div class="fontsticky">
+          <h2>Questions to ask Robot</h2>
+          <p>"What is the weather"</p>
+          <p>"saying "Hello""</p>
+          <p>"My Name is ___"</p>
+          <p>"Donde Esta La Bibloteca"</p>
+        </div>
+      </a>
+    </li>
+  </ul>
 
 
 <script>
@@ -64,7 +78,7 @@
         speechSynthesis.speak(msg)
       }
       uniq.push(line);
-      console.log(uniq);
+      // console.log(uniq);
   }
   
   
